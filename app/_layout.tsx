@@ -21,6 +21,8 @@ SplashScreen.preventAutoHideAsync();
 export default function RootLayout() {
   const [loaded, error] = useFonts({
     VarelaFont: require("../assets/fonts/VarelaRound-Regular.ttf"),
+    ManjariRegular: require("../assets/fonts/Manjari-Regular.ttf"),
+    ManjariBold: require("../assets/fonts/Manjari-Bold.ttf"),
     ...FontAwesome.font,
   });
 

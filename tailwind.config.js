@@ -32,11 +32,6 @@ module.exports = {
           700: "#F24E43",
         },
       },
-      fontFamily: {
-        varela: ["VarelaFont"],
-        manjariRegular: ["ManjariRegular"],
-        manjariBold: ["ManjariBold"]
-      },
     },
   },
   plugins: [],

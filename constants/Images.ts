@@ -1,5 +1,6 @@
-import onboardFirst from '@/assets/images/onboardFirst.png';
-
+import welcome from "@/assets/images/welcome.png";
+import logo from "@/assets/images/logo.png"
 export default {
-    onboardFirst
+  welcome,
+  logo,
 };

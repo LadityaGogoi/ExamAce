@@ -1,48 +1,68 @@
-import { StatusBar } from "expo-status-bar";
-import { Image, Text, TextInput, TouchableOpacity, View, useWindowDimensions } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
-import Entypo from '@expo/vector-icons/Entypo';
-import { Ionicons, MaterialIcons } from "@expo/vector-icons";
-import { Images } from "@/constants";
+import { useState } from "react"
+import { Image, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { router } from "expo-router";
+import { StatusBar } from "expo-status-bar";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { Images } from "@/constants";
 
 const SignupScreen = () => {
-    const windowHeight = useWindowDimensions().height;
+    const [isChecked, setIsChecked] = useState(false)
+
+    const handlePrivacy = () => {
+        setIsChecked(!isChecked)
+    }
+
     return (
-        <SafeAreaView>
-            <View style={[{ minHeight: Math.round(windowHeight) }]}>
-                <View className="w-full h-1/2 justify-between">
-                    <View className="px-3">
-                        <View className="border-2 border-green-500 rounded-full w-9 h-9 justify-center items-center">
-                            <Entypo name="chevron-left" size={32} color="#24AE7C" />
-                        </View>
-                        <View className="justify-center items-center">
-                            <Image source={Images.logo} tintColor="#24AE7C" className="w-16 h-16" resizeMode="contain" />
-                            <Text className="text-3xl font-extrabold text-green-500 text-center underline">CREATE ACCOUNT</Text>
+        <SafeAreaView className="h-screen w-full">
+            <View className="h-full w-full">
+                <View className="w-full h-1/2 flex flex-col justify-between items-center">
+                    <View className="w-full px-3 flex flex-row justify-start items-start">
+                        <View className="w-9 h-9">
+                            <Image source={Images.back} className="w-full h-full
+                             object-cover" />
                         </View>
                     </View>
-                    <View className="px-3 gap-1">
-                        <View>
-                            <Text className="text-xl font-bold text-green-500 pl-3">User Name</Text>
-                            <View className="flex-row bg-white p-3 border-2 border-green-500 rounded-full">
-                                <Ionicons name="person-outline" size={24} color="#24AE7C" />
-                                <TextInput className="flex-1 text-lg px-1" />
-                            </View>
+                    <View className="flex flex-row justify-center items-center">
+                        <View className="w-16 h-16">
+                            <Image source={Images.logo} className="w-full h-full object-cover" />
                         </View>
-                        <View>
-                            <Text className="text-xl font-bold text-green-500 pl-3">Password</Text>
-                            <View className="flex-row bg-white p-3 border-2 border-green-500 rounded-full">
-                                <MaterialIcons name="password" size={24} color="#24AE7C" />
-                                <TextInput className="flex-1 text-lg px-1" />
+                        <Text className="text-3xl text-rose-500 font-extrabold">Create Account</Text>
+                    </View>
+                    <View className="w-5/6 flex flex-col">
+                        <View className="w-full border-2 border-rose-300 rounded flex flex-row items-center">
+                            <View className="w-11 h-11 p-3 border-rose-300 border-r-2">
+                                <Image source={Images.user} className="w-full h-full object-cover" />
                             </View>
+                            <TextInput placeholder="enter your name" className="px-1.5 text-lg text-slate-500" />
+                        </View>
+                        <View className="w-full border-2 border-rose-300 rounded flex flex-row items-center my-3">
+                            <View className="w-11 h-11 p-3 border-rose-300 border-r-2">
+                                <Image source={Images.lock} className="w-full h-full object-cover" />
+                            </View>
+                            <TextInput placeholder="enter your password" className="px-1.5 text-lg text-slate-500" />
+                        </View>
+                        <View className="w-full border-2 border-rose-300 rounded flex flex-row items-center">
+                            <View className="w-11 h-11 p-3 border-rose-300 border-r-2">
+                                <Image source={Images.lock} className="w-full h-full object-cover" />
+                            </View>
+                            <TextInput placeholder="confirm password" className="px-1.5 text-lg text-slate-500" />
                         </View>
                     </View>
                 </View>
-                <View className="h-1/2 justify-center items-center">
-                    <TouchableOpacity className="w-72 bg-green-500 rounded-full py-3 items-center" onPress={() => router.push("/(tabs)")}>
+                <View className="w-full h-1/2 flex flex-col justify-end items-center gap-3">
+                    <View className="w-5/6 flex flex-row justify-between items-center gap-3">
+                        <TouchableOpacity onPress={() => handlePrivacy()} className="w-5 h-5 p-0.5 rounded border-2 border-rose-500">
+                            {
+                                isChecked && (
+                                    <Image source={Images.check} className="w-full h-full object-cover" />
+                                )
+                            }
+                        </TouchableOpacity>
+                        <Text className="flex-1 text-slate-500">By Proceeding. you agree with the Privacy Policy and Terms of Use</Text>
+                    </View>
+                    <TouchableOpacity className="w-5/6 bg-rose-500 rounded-full py-3 items-center" onPress={() => router.push("/(tabs)")}>
                         <Text className="text-xl text-light-200 font-bold">Create Account</Text>
                     </TouchableOpacity>
-                    <Text className="w-64 text-center text-dark-700">By Proceeding. you agree with the Privacy Policy and Terms of Use</Text>
                 </View>
             </View>
             <StatusBar style="dark" />

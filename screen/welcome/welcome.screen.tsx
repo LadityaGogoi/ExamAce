@@ -17,7 +17,7 @@ const WelcomeScreen = () => {
                 </View>
             </View>
             <View className="w-72 flex-row justify-around items-center gap-3">
-                <TouchableOpacity className="border-2 border-rose-500 rounded-full py-3 items-center flex-1">
+                <TouchableOpacity className="border-2 border-rose-500 rounded-full py-3 items-center flex-1" onPress={() => router.push('/(routes)/login')}>
                     <Text className="text-xl text-rose-500 font-bold">Login</Text>
                 </TouchableOpacity>
                 <TouchableOpacity className=" bg-rose-500  rounded-full py-3 items-center flex-1" onPress={() => router.push('/(routes)/signup')}>

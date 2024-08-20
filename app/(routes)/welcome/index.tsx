@@ -6,4 +6,4 @@ const Welcome = () => {
     )
 }
 
-export default WelcomeScreen;
+export default Welcome

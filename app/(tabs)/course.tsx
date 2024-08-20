@@ -1,6 +1,6 @@
 import { View, Text } from "react-native"
 
-const Blog = () => {
+const Course = () => {
     return (
         <View>
             <Text>Blog</Text>
@@ -8,4 +8,4 @@ const Blog = () => {
     )
 }
 
-export default Blog
+export default Course

@@ -1,11 +1,13 @@
 import { Tabs } from 'expo-router';
 import { FontAwesome6, Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
+import { Image } from 'react-native';
+import { Images } from '@/constants';
 
 const TabLayout = () => {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: "#24AE7C",
+        tabBarActiveTintColor: "#f43f5e",
         tabBarLabelStyle: {
           paddingBottom: 10,
         },
@@ -15,22 +17,34 @@ const TabLayout = () => {
       }}
     >
       <Tabs.Screen name='index' options={{
-        tabBarLabel: "Explore",
+        tabBarLabel: "Home",
         tabBarIcon: ({ size, color }) => (
-          <MaterialCommunityIcons name='lighthouse' size={size} color={color} />
+          <Image
+            source={Images.home}
+            style={{ width: size, height: size }}
+            tintColor={color}
+          />
         ),
         headerShown: false,
       }} />
-      <Tabs.Screen name='blog' options={{
-        tabBarLabel: "Blog",
+      <Tabs.Screen name='course' options={{
+        tabBarLabel: "Course",
         tabBarIcon: ({ size, color }) => (
-          <MaterialCommunityIcons name='message-outline' size={size} color={color} />
+          <Image
+            source={Images.course}
+            style={{ width: size, height: size }}
+            tintColor={color}
+          />
         )
       }} />
       <Tabs.Screen name='leaderboard' options={{
-        tabBarLabel: "Compete",
+        tabBarLabel: "Leaderboard",
         tabBarIcon: ({ size, color }) => (
-          <FontAwesome6 name='ranking-star' size={size} color={color} />
+          <Image
+            source={Images.rank}
+            style={{ width: size, height: size }}
+            tintColor={color}
+          />
         )
       }} />
       <Tabs.Screen
@@ -38,7 +52,11 @@ const TabLayout = () => {
         options={{
           tabBarLabel: "Profile",
           tabBarIcon: ({ size, color }) => (
-            <Ionicons name="person-outline" size={size} color={color} />
+            <Image
+            source={Images.user}
+            style={{ width: size, height: size }}
+            tintColor={color}
+          />
           ),
         }}
       />

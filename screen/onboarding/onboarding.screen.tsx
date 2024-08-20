@@ -57,7 +57,7 @@ const OnBoardingScreen = () => {
         </View>
       </View>
       <View className="w-72">
-        <TouchableOpacity className="bg-green-500 rounded-full shadow-lg py-3 items-center" onPress={OnContinue}>
+        <TouchableOpacity className="bg-red-500 rounded-full shadow-lg py-3 items-center" onPress={OnContinue}>
           <Text className="text-xl text-light-200 font-bold">{screenIndex === (OnboardingSteps.length - 1) ? 'Get Started' : 'Continue'}</Text>
         </TouchableOpacity>
       </View>

@@ -1,5 +1,5 @@
-import { Tabs } from 'expo-router'
-import { FontAwesome6, Ionicons, MaterialCommunityIcons } from '@expo/vector-icons'
+import { Tabs } from 'expo-router';
+import { FontAwesome6, Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 
 const TabLayout = () => {
   return (

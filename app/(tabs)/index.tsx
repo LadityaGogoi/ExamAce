@@ -1,17 +1,9 @@
-import { View, Text } from 'react-native'
-import React from 'react'
-import { SafeAreaView } from 'react-native-safe-area-context'
-import { StatusBar } from 'expo-status-bar'
+import HomeScreen from "@/screen/home/home.screen"
 
-const HomeScreen = () => {
+const Home = () => {
   return (
-    <SafeAreaView>
-      <View>
-        <Text>Home Page</Text>
-      </View>
-      <StatusBar style='dark' />
-    </SafeAreaView>
+    <HomeScreen />
   )
 }
 
-export default HomeScreen
+export default Home

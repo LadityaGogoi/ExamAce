@@ -39,25 +39,25 @@ const OnBoardingScreen = () => {
       <View className="w-72 flex-row justify-between items-center">
         <View className="flex-row gap-1">
           {OnboardingSteps.map((item) => (
-            <View key={item.id} className={`bg-green-500 rounded-full ${screenIndex === item.id ? 'w-7' : 'w-1'} h-1`}></View>
+            <View key={item.id} className={`bg-rose-500 rounded-full ${screenIndex === item.id ? 'w-7' : 'w-1'} h-1`}></View>
           ))}
         </View>
         <View>
           <TouchableOpacity onPress={() => router.push('/(tabs)')}>
-            <Text className="text-lg text-green-500 font-bold">skip</Text>
+            <Text className="text-lg text-rose-500 font-bold">skip</Text>
           </TouchableOpacity>
         </View>
       </View>
       <View className="h-60 justify-center items-center">
         <View className="w-64">
-          <Animated.Text key={screenIndex} entering={SlideInUp.delay(100)} exiting={SlideOutDown} className="text-3xl font-extrabold text-green-500 text-center">{data.title}</Animated.Text>
+          <Animated.Text key={screenIndex} entering={SlideInUp.delay(100)} exiting={SlideOutDown} className="text-3xl font-extrabold text-rose-500 text-center">{data.title}</Animated.Text>
         </View>
         <View className="w-80">
-          <Animated.Text key={screenIndex} entering={SlideInUp.delay(100)} exiting={SlideOutDown} className="text-base text-dark-600 text-center">{data.description}</Animated.Text>
+          <Animated.Text key={screenIndex} entering={SlideInUp.delay(100)} exiting={SlideOutDown} className="text-base text-slate-500 text-center">{data.description}</Animated.Text>
         </View>
       </View>
       <View className="w-72">
-        <TouchableOpacity className="bg-red-500 rounded-full shadow-lg py-3 items-center" onPress={OnContinue}>
+        <TouchableOpacity className="bg-rose-500 rounded-full shadow-lg py-3 items-center" onPress={OnContinue}>
           <Text className="text-xl text-light-200 font-bold">{screenIndex === (OnboardingSteps.length - 1) ? 'Get Started' : 'Continue'}</Text>
         </TouchableOpacity>
       </View>

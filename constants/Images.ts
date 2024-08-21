@@ -10,6 +10,8 @@ import back from '@/assets/images/icons/back.png'
 import lock from '@/assets/images/icons/lock.png'
 import quiz from '@/assets/images/icons/quiz.png'
 import weekly from '@/assets/images/icons/weekly.png'
+import view from '@/assets/images/icons/view.png'
+import free from '@/assets/images/icons/free.png'
 import test from '@/assets/images/icons/test.png'
 import video from '@/assets/images/icons/video.png'
 import news from '@/assets/images/icons/news.png'
@@ -34,6 +36,8 @@ export default {
   rank,
   course,
   news,
+  free,
+  view,
   search,
   notification,
   chemistryBG,

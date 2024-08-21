@@ -9,6 +9,7 @@ type Props = {
 const Trending = ({ topicList }: Props) => {
     return (
         <View className="my-3">
+            <Text className="w-11/12 mx-auto mb-3 text-3xl text-rose-500 font-extrabold">Trending Topics</Text>
             <FlatList
                 data={topicList}
                 renderItem={({ item, index }) => <Card item={item} index={index} />}

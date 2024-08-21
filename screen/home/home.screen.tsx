@@ -2,6 +2,7 @@ import { ImageSlider } from "@/assets/data/SliderData";
 import { trendingTopics } from "@/assets/data/TrendingData";
 import Carousel from "@/components/carousel/carousel";
 import Feature from "@/components/feature/feature";
+import Footer from "@/components/footer/footer";
 import Search from "@/components/search/search";
 import Trending from "@/components/trending/trending";
 import { Images } from "@/constants";
@@ -28,6 +29,7 @@ const HomeScreen = () => {
                 <Carousel itemList={ImageSlider} />
                 <Feature />
                 <Trending topicList={trendingTopics} />
+                <Footer />
             </ScrollView>
             <StatusBar style="dark" />
         </SafeAreaView>

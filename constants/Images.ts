@@ -20,6 +20,7 @@ import notification from '@/assets/images/icons/notification.png'
 import chemistryBG from '@/assets/images/chemistry/background.jpg'
 import physicsBG from '@/assets/images/physics/background.jpg'
 import mathBG from '@/assets/images/math/background.jpg'
+import PYQ from '@/assets/images/pyq.jpg'
 
 export default {
   welcome,
@@ -43,5 +44,6 @@ export default {
   chemistryBG,
   physicsBG,
   mathBG,
-  video
+  PYQ,
+  video,
 };

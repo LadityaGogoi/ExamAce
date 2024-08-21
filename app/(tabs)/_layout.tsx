@@ -35,7 +35,8 @@ const TabLayout = () => {
             style={{ width: size, height: size }}
             tintColor={color}
           />
-        )
+        ),
+        headerShown: false
       }} />
       <Tabs.Screen name='leaderboard' options={{
         tabBarLabel: "Leaderboard",
@@ -53,10 +54,10 @@ const TabLayout = () => {
           tabBarLabel: "Profile",
           tabBarIcon: ({ size, color }) => (
             <Image
-            source={Images.user}
-            style={{ width: size, height: size }}
-            tintColor={color}
-          />
+              source={Images.user}
+              style={{ width: size, height: size }}
+              tintColor={color}
+            />
           ),
         }}
       />

@@ -8,6 +8,11 @@ import loop from "@/assets/images/weekly.png";
 import check from '@/assets/images/icons/check.png'
 import back from '@/assets/images/icons/back.png'
 import lock from '@/assets/images/icons/lock.png'
+import quiz from '@/assets/images/icons/quiz.png'
+import weekly from '@/assets/images/icons/weekly.png'
+import test from '@/assets/images/icons/test.png'
+import video from '@/assets/images/icons/video.png'
+import news from '@/assets/images/icons/news.png'
 import notification from '@/assets/images/icons/notification.png'
 import chemistryBG from '@/assets/images/chemistry/background.jpg'
 import physicsBG from '@/assets/images/physics/background.jpg'
@@ -21,11 +26,16 @@ export default {
   back,
   user,
   lock,
+  quiz,
+  weekly,
+  test,
   home,
   rank,
   course,
+  news,
   notification,
   chemistryBG,
   physicsBG,
-  mathBG
+  mathBG,
+  video
 };

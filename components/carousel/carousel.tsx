@@ -25,7 +25,7 @@ const Carousel = ({ itemList }: Props) => {
         { viewabilityConfig, onViewableItemsChanged }
     ])
     return (
-        <View>
+        <View className="my-3">
             <FlatList
                 data={itemList}
                 renderItem={({ item, index }) => <CarouselItem item={item} index={index} />}

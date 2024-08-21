@@ -1,6 +1,7 @@
 import { ImageSlider } from "@/assets/data/SliderData";
 import Carousel from "@/components/carousel/carousel";
 import Feature from "@/components/feature/feature";
+import Search from "@/components/search/search";
 import { Images } from "@/constants";
 import { FontAwesome6, MaterialIcons } from "@expo/vector-icons";
 import { StatusBar } from "expo-status-bar";
@@ -56,8 +57,9 @@ const HomeScreen = () => {
                         <Image source={Images.notification} className="w-full h-full object-cover" />
                     </View>
                 </View>
-                <Feature />
+                <Search />
                 <Carousel itemList={ImageSlider} />
+                <Feature />
             </ScrollView>
             <StatusBar style="dark" />
         </SafeAreaView>

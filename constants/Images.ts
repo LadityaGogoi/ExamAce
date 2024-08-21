@@ -13,6 +13,7 @@ import weekly from '@/assets/images/icons/weekly.png'
 import test from '@/assets/images/icons/test.png'
 import video from '@/assets/images/icons/video.png'
 import news from '@/assets/images/icons/news.png'
+import search from '@/assets/images/icons/search.png'
 import notification from '@/assets/images/icons/notification.png'
 import chemistryBG from '@/assets/images/chemistry/background.jpg'
 import physicsBG from '@/assets/images/physics/background.jpg'
@@ -33,6 +34,7 @@ export default {
   rank,
   course,
   news,
+  search,
   notification,
   chemistryBG,
   physicsBG,

@@ -3,7 +3,7 @@ import { Image, Text, View } from "react-native"
 
 const Feature = () => {
     return (
-        <View className="p-3 mx-auto flex flex-col flex-wrap">
+        <View className="w-11/12 my-3 mx-auto flex flex-col flex-wrap">
             <View className="flex flex-row w-full">
                 <View className="flex-1 flex flex-row justify-between items-center m-1 p-3 border border-slate-300 rounded">
                     <View className="w-5 h-5">
